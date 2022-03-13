@@ -13,12 +13,66 @@ body {
     flex-direction: column;
     justify-content: space-between;
     background-color: #FFFFFF;
-    background-image: url('./assets/images/bg.png');
+    background-image: url("./assets/images/bg.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: 522px 680px;
     backdrop-filter: blur(80px);
     min-height: 100vh;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: 'Xanh Mono', monospace;
+    font-size: 64px;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Xanh Mono', monospace;
+    font-size: 48px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: #b964db;
+}
+
+a:hover {
+    color: #b964db;
+}
+
+.underlined {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+
+.underlined:before {
+    content: '';
+    position: absolute;
+    transition: transform .5s ease;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #c66fe9;
+    transform: translateX(-100%);
+}
+
+.underlined:hover:before {
+    transform: translateX(0);
 }
 
 .container {
@@ -44,4 +98,51 @@ body {
 .main-container {
     display: flex;
     flex-direction: row;
+}
+
+.contacts-list {
+    list-style: none;
+}
+
+.contacts-item {
+    position: relative;
+    padding-left: 25px;
+}
+  
+.contacts-item::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    width: 20px;
+    height: 20px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contacts-item:nth-child(1):before {
+    background-image: url("./assets/svg/geo.svg");
+    width: 25px;
+    height: 25px; 
+    top: 2px;
+    left: -3px;
+}
+
+.contacts-item:nth-child(2):before {
+    background-image: url("./assets/svg/phone.svg");
+}
+
+.contacts-item:nth-child(3):before {
+    background-image: url("./assets/svg/email.svg");
+}
+
+.contacts-item:nth-child(4):before {
+    background-image: url("./assets/svg/tg.svg");
+}
+
+.contacts-item:nth-child(5):before {
+    background-image: url("./assets/svg/gh.svg");
+    width: 25px;
+    height: 25px; 
+    left: -3px;
 }
