@@ -18,6 +18,8 @@ body {
     background-position: top;
     background-size: 522px 680px;
     backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
+    -moz-backdrop-filter: blur(80px);
     min-height: 100vh;
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 20px;
@@ -37,25 +39,6 @@ h2 {
     font-style: italic;
 }
 
-h3 {
-    display: inline-block;
-    font-size: 22px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-}
-
-h3::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background: rgba(0, 0, 0, 0.4);
-}
-
 a {
     text-decoration: none;
     color: #d986ff;
@@ -67,13 +50,13 @@ a:hover {
     color: #bb2df3;
 }
 
-.underlined {
+.nav__link {
     display: inline-block;
     overflow: hidden;
     position: relative;
 }
 
-.underlined:before {
+.nav__link:before {
     content: '';
     position: absolute;
     transition: transform .5s ease;
@@ -85,7 +68,7 @@ a:hover {
     transform: translateX(-100%);
 }
 
-.underlined:hover:before {
+.nav__link:hover:before {
     transform: translateX(0);
 }
 
@@ -95,7 +78,7 @@ a:hover {
     padding: 0 10px;
 }
 
-.nav-list {
+.nav__list {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -103,7 +86,7 @@ a:hover {
     list-style: none;
 }
 
-.section-hero {
+.section__profile {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -111,11 +94,15 @@ a:hover {
     padding-left: 15px;
 }
 
-.hero-text {
+.profile__text {
     max-width: 600px;
 }
 
-.main-container {
+.profile__avatar {
+    width: 250px;
+}
+
+.main__container {
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -126,54 +113,73 @@ a:hover {
     padding: 5px 5px 20px 5px;
 }
 
-.contacts-list {
+.section__title {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.section__title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.contacts__list {
     list-style: none;
 }
 
-.contacts-item {
+.contacts__list__item {
     position: relative;
     padding-left: 25px;
 }
-  
-.contacts-item::before {
+
+.contacts__list__item::before {
     content: "";
     position: absolute;
     top: 5px;
     left: 0px;
     width: 20px;
-    height: 20px; 
+    height: 20px;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-.contacts-item:nth-child(1):before {
+.contacts__list__item:nth-child(1):before {
     background-image: url("./assets/svg/geo.svg");
     width: 25px;
-    height: 25px; 
+    height: 25px;
     top: 2px;
     left: -3px;
 }
 
-.contacts-item:nth-child(2):before {
+.contacts__list__item:nth-child(2):before {
     background-image: url("./assets/svg/phone.svg");
 }
 
-.contacts-item:nth-child(3):before {
+.contacts__list__item:nth-child(3):before {
     background-image: url("./assets/svg/email.svg");
 }
 
-.contacts-item:nth-child(4):before {
+.contacts__list__item:nth-child(4):before {
     background-image: url("./assets/svg/tg.svg");
 }
 
-.contacts-item:nth-child(5):before {
+.contacts__list__item:nth-child(5):before {
     background-image: url("./assets/svg/gh.svg");
     width: 25px;
-    height: 25px; 
+    height: 25px;
     left: -3px;
 }
 
-.skills-list {
+.skills__list {
     padding-left: 20px;
     list-style-type: circle;
 }
@@ -182,31 +188,31 @@ a:hover {
     font-weight: 600;
 }
 
-.courses-list {
+.courses__list {
     padding-left: 20px;
     list-style-type: circle;
 }
 
-.projects-items {
+.projects__items {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     margin-top: 15px;
     gap: 15px;
 }
 
-.project-item {
+.project__item {
     width: 400px;
     height: 210px;
     position: relative;
     overflow: hidden;
 }
 
-.project-image {
+.project__image {
     width: 400px;
     height: 210px;
 }
 
-.project-info {
+.project__info {
     position: absolute;
     top: 0;
     left: 0;
@@ -224,25 +230,47 @@ a:hover {
     padding: 0 10px;
 }
 
-.project-item:hover .project-info {
+.project__item:hover .project__info {
     transform: translateY(0%);
 }
 
+.project__title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
 .certificate {
+    display: block;
     max-width: 400px;
 }
 
-.education-list {
+.education__list {
     list-style: none;
 }
 
-.education-additional {
+.list__item--title {
+    font-weight: bold;
+}
+
+.education__list__additional {
     padding-left: 20px;
-    list-style-type: circle;
+    font-weight: 400;
+    list-style: none;
+}
+
+.work__list,
+.work__list__additional {
+    list-style: none;
+}
+
+.work__list__additional {
+    padding-left: 20px;
+    font-weight: 400;
 }
 
 @media (max-width: 895px) {
-    .section-hero {
+
+    .section__profile {
         justify-content: center;
         text-align: center;
         gap: 20px;
@@ -251,36 +279,44 @@ a:hover {
 
 @media (max-width: 730px) {
 
-    .nav-list {
+    h1 {
+        font-size: 56px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .nav__list {
         flex-wrap: wrap;
     }
 
-    .main-container {
+    .main__container {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 0;
     }
 
-    .first-column {
+    .main__first-column {
         width: 100%;
     }
 
-    .second-column {
+    .main__second-column {
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 100%;
     }
 
-    .contacts-list {
+    .contacts__list {
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-start;
         column-gap: 20px;
     }
 
-    .projects-items {
+    .projects__items {
         justify-content: center;
     }
 
@@ -288,17 +324,27 @@ a:hover {
 
 @media (max-width: 450px) {
 
-    .project-item {
+
+    .projects__items {
+        gap: 5px;
+    }
+
+    .project__item {
+        width: 100%;
+        height: auto;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .project__title {
+        font-size: 20px;
+    }
+
+    .project__image {
         width: 100%;
         height: auto;
     }
 
-    .project-image {
-        width: 100%;
-        height: auto;
-    }
-
-    
     .certificate {
         width: 100%;
         height: auto;

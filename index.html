@@ -15,122 +15,134 @@
     <header>
         <div class="container">
             <nav class="nav">
-                <ul class="nav-list">
-                    <li><a class="underlined" href="#contacts">contacts</a></li>
-                    <li><a class="underlined" href="#about_me">about me</a></li>
-                    <li><a class="underlined" href="#skills">skills</a></li>
-                    <li><a class="underlined" href="#projects">projects</a></li>
-                    <li><a class="underlined" href="#courses">courses</a></li>
-                    <li><a class="underlined" href="#education">education</a></li>
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="#contacts">contacts</a></li>
+                    <li><a class="nav__link" href="#about_me">about me</a></li>
+                    <li><a class="nav__link" href="#skills">skills</a></li>
+                    <li><a class="nav__link" href="#projects">projects</a></li>
+                    <li><a class="nav__link" href="#courses">courses</a></li>
+                    <li><a class="nav__link" href="#education">education</a></li>
+                    <li><a class="nav__link" href="#work">work experience</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section class="section-hero container">
-            <img src="./assets/images/ava.png" alt="avatar">
-            <div class="hero-text">
+        <section class="section__profile container">
+            <img class="profile__avatar" src="./assets/images/ava.png" alt="avatar">
+            <div class="profile__text">
                 <h1>Ksenia Shevtsova</h1>
                 <h2>Junior Frontend Developer</h2>
             </div>
         </section>
-        <div class="container main-container">
-            <div class="first-column">
-                <section class="section section-contacts">
-                    <h3 id="contacts">contacts</h3>
-                    <ul class="contacts-list">
-                        <li class="contacts-item">Volgograd, Russia</li>
-                        <li class="contacts-item"><a href="tel:+79053956718">+7 (905) 395-67-18</a></li>
-                        <li class="contacts-item"><a href="mailto:shevtsova.ks1@yandex.ru">shevtsova.ks1@yandex.ru</a></li>
-                        <li class="contacts-item"><a href="https://t.me/x_is_undefined">@x_is_undefined</a></li>
-                        <li class="contacts-item"><a href="https://github.com/illusiondelusion">illusiondelusion</a></li>
+        <div class="container main__container">
+            <div class="main__first-column">
+                <section class="section section__contacts">
+                    <h3 class="section__title" id="contacts">contacts</h3>
+                    <ul class="contacts__list">
+                        <li class="contacts__list__item">Volgograd, Russia</li>
+                        <li class="contacts__list__item"><a href="tel:+79053956718">+7 (905) 395-67-18</a></li>
+                        <li class="contacts__list__item"><a href="mailto:shevtsova.ks1@yandex.ru">shevtsova.ks1@yandex.ru</a></li>
+                        <li class="contacts__list__item"><a href="https://t.me/schrodingerman">@schrodingerman</a></li>
+                        <li class="contacts__list__item"><a href="https://github.com/illusiondelusion">illusiondelusion</a></li>
                     </ul>
                 </section>
             </div>
-            <div class="second-column">
-                <section class="section section-about">
-                    <h3 id="about_me">about me</h3>
-                    <p>I've been interested in web development since school, but decided to choose another profession after my graduation.
-                    And now I finally study and practice what I really like!
+            <div class="main__second-column">
+                <section class="section section__about">
+                    <h3 class="section__title" id="about_me">about me</h3>
+                    <p>I'm currently studying at Strada course and hope to become a frontend developer as soon as possible.
                     Seeing the result of my work is a true happiness for me.
-                    I'm eager to learn different information, open-minded and diligent, enjoy creating new things. </p>
+                    I'm eager to learn different information, open-minded and diligent, enjoy creating new things.</p>
                 </section>
-                <section class="section section-skills">
-                    <h3 id="skills">skills</h3>
-                    <ul class="skills-list">
-                        <li><span class="bold"> Web-development:</span> HTML5, CSS3, SCSS, JavaScript</li>
+                <section class="section section__skills">
+                    <h3 class="section__title" id="skills">skills</h3>
+                    <ul class="skills__list">
+                        <li><span class="bold"> Web-development:</span> HTML, CSS, JavaScript</li>
                         <li><span class="bold">Version control:</span> Git, GitHub</li>
                         <li><span class="bold">Graphics:</span> Figma, Adobe Photoshop</li>
                         <li><span class="bold">English:</span> B1 - Intermediate</li>
                     </ul>
                 </section>
-                <section class="section section-projects">
-                    <h3 id="projects">projects</h3>
-                    <div class="projects-items">
-                        <figure class="project-item">
-                            <img class="project-image" src="./assets/images/kids-centre.jpg" alt="center of social support">
-                            <figcaption class="project-info">
-                                <p class="bold">Center of social support</p>
+                <section class="section section__projects">
+                    <h3 class="section__title" id="projects">projects</h3>
+                    <div class="projects__items">
+                        <figure class="project__item">
+                            <img class="project__image" src="./assets/images/kids-centre.jpg" alt="center of social support">
+                            <figcaption class="project__info">
+                                <h3 class="project__title">Center of social support</h3>
                                 <p>Center of social support for kids website (HTML, CSS, mobile version, interface design)</p>
-                                <span><a href="https://sinyaya-ptica.ru" target="_blank">view</a></span>
+                                <span><a href="https://sinyaya-ptica.ru" target="_blank">view</a> | 
+                                <a href="https://github.com/illusiondelusion/kids-centre" target="_blank">repo</a></span>
                             </figcaption>
                         </figure>
-                        <figure class="project-item">
-                            <img class="project-image" src="./assets/images/portfolio.jpg" alt="portfolio">
-                            <figcaption class="project-info">
-                                <p class="bold">Portfolio</p>
+                        <figure class="project__item">
+                            <img class="project__image" src="./assets/images/portfolio.jpg" alt="portfolio">
+                            <figcaption class="project__info">
+                                <h3 class="project__title">Portfolio</h3>
                                 <p>Photographer's portfolio landing page (HTML, CSS, mobile version, JS)</p>
                                 <span>
                                     <a href="https://rolling-scopes-school.github.io/illusiondelusion-JSFEPRESCHOOL/portfolio/" target="_blank">view</a> 
                                     | 
-                                    <a href="http://" target="_blank">repo</a>
+                                    <a href="/" target="_blank">repo</a>
                                 </span>
                             </figcaption>
                         </figure>
-                        <figure class="project-item">
-                            <img class="project-image" src="./assets/images/shelter.jpg" alt="shelter">
-                            <figcaption class="project-info">
-                                <p class="bold">Shelter</p>
-                                <p>Website of a Cosy House shelter  (HTML, CSS, mobile version, JS)</p>
-                                <span>
-                                    <a href="https://rolling-scopes-school.github.io/illusiondelusion-JSFE2022Q1/shelter/pages/main/index.html" target="_blank">view</a>
-                                    | 
-                                    <a href="http://" target="_blank">repo</a></span>
-                            </figcaption>
-                        </figure>
-                        <figure class="project-item">
-                            <img class="project-image" src="./assets/images/audioplayer.jpg" alt="audio player">
-                            <figcaption class="project-info">
-                                <p class="bold">Audio player</p>
+                        <figure class="project__item">
+                            <img class="project__image" src="./assets/images/audioplayer.jpg" alt="audio player">
+                            <figcaption class="project__info">
+                                <h3 class="project__title">Audio player</h3>
                                 <p>Custom audio player (HTML, CSS, mobile version, JS, interface design)</p>
                                 <span>
                                     <a href="https://rolling-scopes-school.github.io/illusiondelusion-JSFEPRESCHOOL/audio-player/" target="_blank">view</a> 
                                     | 
-                                    <a href="http://" target="_blank">repo</a>
+                                    <a href="/" target="_blank">repo</a>
                                 </span>
+                            </figcaption>
+                        </figure>
+                        <figure class="project__item">
+                            <img class="project__image" src="./assets/images/shelter.jpg" alt="shelter">
+                            <figcaption class="project__info">
+                                <h3 class="project__title">Shelter</h3>
+                                <p>Website of a Cosy House shelter  (HTML, CSS, mobile version)</p>
+                                <span>
+                                    <a href="https://rolling-scopes-school.github.io/illusiondelusion-JSFE2022Q1/shelter/pages/main/index.html" target="_blank">view</a>
+                                    | 
+                                    <a href="/" target="_blank">repo</a></span>
                             </figcaption>
                         </figure>
                     </div>
                 </section>
-                <section class="section section-courses">
-                    <h3 id="courses">courses</h3>
-                    <ul class="courses-list">
+                <section class="section section__courses">
+                    <h3 class="section__title" id="courses">courses</h3>
+                    <ul class="courses__list">
                         <li>Code Basics: HTML, CSS, JavaScript for beginners</li>
                         <li><a target="_blank" href="https://app.rs.school/certificate/graxwvzp">Rolling Scopes School: JS/FE PRE-SCHOOL 2022 (JAVASCRIPT) <br>
                             <img class="certificate" src="./assets/images/certificate.jpg" alt="certificate"></a>
                         </li>
                     </ul>
-                    <ul class="courses-list">
+                    <ul class="courses__list">
                         <li><a target="_blank" href="https://strada.one/">Strada (in progress)</a></li>
                     </ul>
                 </section>
-                <section class="section section-education">
-                    <h3 id="education">education</h3>
-                    <ol class="education-list">
-                        <li>Volgograd State Medical University
-                            <ul class="education-additional">
+                <section class="section section__education">
+                    <h3 class="section__title" id="education">education</h3>
+                    <ol class="education__list">
+                        <li class="list__item--title">Volgograd State Medical University
+                            <ul class="education__list__additional">
                                 <li>Faculty of Biomedicine | Medical Biochemistry</li>
                                 <li>Specialist degree (2013 - 2019)</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+                <section class="section section__work">
+                    <h3 class="section__title" id="work">work experience</h3>
+                    <ol class="work__list">
+                        <li class="list__item--title">VRANO Sinyaya Ptitsa
+                            <ul class="work__list__additional">
+                                <li>Website maintenance specialist (Web-development, interface design, content creation and updating)</li>
+                                <li>03/2022 - present</li>
                             </ul>
                         </li>
                     </ol>
@@ -140,7 +152,7 @@
     </main>
     <footer>
         <div class="container">
-            <span>© 2022</span> 
+            <span>© 2023</span>
             <a href="https://github.com/illusiondelusion/">illusiondelusion</a>
         </div>
     </footer>
