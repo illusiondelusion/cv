@@ -9,21 +9,38 @@ html {
 }
 
 body {
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #FFFFFF;
-    background-image: url("./assets/images/bg.png");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 522px 680px;
-    backdrop-filter: blur(80px);
-    -webkit-backdrop-filter: blur(80px);
-    -moz-backdrop-filter: blur(80px);
     min-height: 100vh;
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 20px;
     font-weight: 400;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-image: url("./assets/images/bg.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 522px 680px;
+    width: 100wv;
+    height: 100vh;
+    -webkit-filter: blur(80px);
+    -moz-filter: blur(80px);
+    -o-filter: blur(80px);
+    -ms-filter: blur(80px);
+    filter: blur(80px);
 }
 
 h1 {
